@@ -1,2 +1,18 @@
-# royal-rumbler
-Simple Application to see statistics of the Royal Rumble
+# Royal Rumbler
+
+A simple application to see statistics of the Royal Rumble
+
+Uses SQLite and Express to host data analysis and stats about entrants and events related to the [Royal Rumble](https://en.wikipedia.org/wiki/Royal_Rumble_match).
+
+## To Install and Use
+
+First, install using...
+
+```bash
+npm install
+```
+
+Then run using...
+```bash
+npm run dev
+```
