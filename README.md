@@ -1,4 +1,4 @@
-# Royal Rumbler
+# rumblr.app
 
 A simple application to see statistics of the Royal Rumble
 
@@ -16,3 +16,11 @@ Then run using...
 ```bash
 npm run dev
 ```
+
+## Dev Notes
+
+Features
+- [ ] Saved Favorites
+- [ ] Custom Graphs
+- [ ] Tool to add events/entrants/eliminations
+- [ ] Minimalist UI

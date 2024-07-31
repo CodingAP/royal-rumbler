@@ -1,3 +1,5 @@
+import apiRouter from './src/api.js';
+import LOGGER from './src/logger.js';
 import express from 'express';
 import { readFileSync, existsSync } from 'fs';
 import { parse } from 'path';
@@ -7,7 +9,7 @@ const PORT = 3000;
 
 const routes = {
     '/': 'public/index.html'
-}
+};
 
 const contentTypes = {
     '.html': 'text/html',
@@ -16,7 +18,10 @@ const contentTypes = {
     '.png': 'image/png',
     '.jpg': 'image/jpeg',
     '.jpeg': 'image/jpeg',
-}
+};
+
+app.use(express.urlencoded({ extended: false }));
+app.use('/api', apiRouter);
 
 app.get('*', (request, response) => {
     let filePath = routes[request.path] || routes[request.path + '.html'];
@@ -44,5 +49,5 @@ app.get('*', (request, response) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
+    LOGGER.info(`App has been created! Hosted on http://localhost:${PORT}...`);
 });
